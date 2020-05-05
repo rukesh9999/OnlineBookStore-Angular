@@ -14,9 +14,10 @@ export class BookListComponent implements OnInit {
   books:Book[]=[];
   currentCategoryId:number;
   constructor(private _bookservice:BookService,private _activateRoute:ActivatedRoute) { }
-
+  
   ngOnInit(): void {
     this._activateRoute.paramMap.subscribe(()=>{    this.listBooks();    });
+
   }
 
   listBooks()
@@ -33,6 +34,6 @@ export class BookListComponent implements OnInit {
     this._bookservice.getBooks(this.currentCategoryId).subscribe(
       data => this.books=data
     )
-  }
 
+  }
 }
