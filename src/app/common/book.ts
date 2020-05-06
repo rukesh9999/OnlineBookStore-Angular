@@ -1,9 +1,10 @@
 export class Book {
-      sku:string;
+	  id:number;
+	  sku:string;
 	  name:string;
 	  description:string;
 	  unit_price:number;
-	  img_Url:string;
+	  image_Url:string;
 	  active:boolean;
 	  units_in_stock:number;
 	  date_created:Date;
